@@ -3,32 +3,43 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
-    image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
-    demoUrl: "#",
-    githubUrl: "#",
+    title: "NGO Reporting & Connect Platform",
+    description:
+      "A web platform that connects NGOs with volunteers and tracks social activities, donations, and impact reports.",
+    image: "https://www.shutterstock.com/image-vector/ngo-word-concepts-banner-non-260nw-1350214097.jpg",
+    tags: ["Spring Boot", "React", "MySQL", "REST API"],
+    demoUrl: "hhttps://vivek-ngo.vercel.app/",
+    githubUrl: "https://github.com/vivekglbajaj/NGO-Connects.git",
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
+    title: "Master Quiz Application",
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
-    image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "An interactive quiz application with real-time scoring, category selection, and leaderboard features.",
+    image: "https://imgs.search.brave.com/qdSVvmHRUzKu_PbrSvDF1G_IVlRrkVILB40YNcnCbH8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS12ZWN0b3Iv/cXVpei1zaG93Y29u/Y2VwdC1pbGx1c3Ry/YXRpb25fMTE0MzYw/LTEyMzAwLmpwZz9z/ZW10PWFpc19oeWJy/aWQmdz03NDA",
+    tags: ["React", "Spring Boot", "PostgreSQL", "JWT"],
+    demoUrl: "https://your-demo-link.com",
+    githubUrl: "https://github.com/vivekglbajaj/MasterQuiz.git",
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "AI Helmet Detection & Vehicle Control System",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "AI-powered system to detect helmet usage on bikers and control vehicle ignition using computer vision.",
+    image: "https://media.gettyimages.com/id/2203506282/photo/male-rider-putting-on-equipment-to-ride-motorcycle.jpg?s=612x612&w=0&k=20&c=mqlTmK9M3M9WujfXm01z6qc1gOO2Z8oT9G5zgZ3HVHQ=",
+    tags: ["Python", "OpenCV", "TensorFlow", "Spring Boot"],
+    demoUrl: "https://your-demo-link.com",
+    githubUrl: "https://github.com/yourusername/helmet-detection",
+  },
+  {
+    id: 4,
+    title: "OTT-Application",
+    description:
+      "A movie browsing application with search, filtering, and watchlist features using a third-party movie API.",
+    image: "https://mir-s3-cdn-cf.behance.net/projects/404/341558228565917.Y3JvcCw2MTM2LDQ4MDAsMTM2LDA.jpg",
+    tags: ["React", "Tailwind CSS", "API Integration"],
+    demoUrl: "https://your-demo-link.com",
+    githubUrl: "https://github.com/vivekglbajaj/OTT-Application.git",
   },
 ];
 
@@ -37,8 +48,7 @@ export const ProjectsSection = () => {
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          {" "}
-          Featured <span className="text-primary"> Projects </span>
+          Featured <span className="text-primary">Projects</span>
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
@@ -62,14 +72,17 @@ export const ProjectsSection = () => {
 
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+                  {project.tags.map((tag, idx) => (
+                    <span
+                      key={idx}
+                      className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
+                    >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
+                <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
                 <p className="text-muted-foreground text-sm mb-4">
                   {project.description}
                 </p>
@@ -100,7 +113,7 @@ export const ProjectsSection = () => {
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
-            href="https://github.com/machadop1407"
+            href="https://github.com/vivekglbajaj?tab=repositories"
           >
             Check My Github <ArrowRight size={16} />
           </a>
