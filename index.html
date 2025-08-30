@@ -2,35 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Rounded favicon (use a circular PNG) -->
+    <!-- Favicon (already rounded image) -->
     <link rel="icon" type="image/png" href="/vivek_photo.jpeg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vivek Kumar Portfolio</title>
+    <!-- Optional: add a rounded image on page -->
     <style>
-      /* All circular images on page */
       .rounded-avatar {
-        width: 100px;         /* adjust size */
-        height: 100px;        /* adjust size */
-        border-radius: 50%;   /* makes it circle */
-        object-fit: cover;    /* keeps image proportional */
-        border: 2px solid #333; /* optional border */
-      }
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background: #f0f0f0;
-        margin: 0;
-        font-family: sans-serif;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
       }
     </style>
   </head>
   <body>
     <div id="root"></div>
 
-    <!-- Example of a circular profile image on page -->
-    <img src="/vivek_photo.jpeg" alt="Vivek Kumar" class="rounded-avatar" />
+    <!-- Example of showing rounded image on page -->
+    <img src="public/vivek_photo_rounded.png" alt="Vivek Kumar" class="rounded-avatar" />
 
     <script type="module" src="/src/main.jsx"></script>
   </body>
