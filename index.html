@@ -2,12 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- Rounded favicon (use a circular PNG) -->
+    <link rel="icon" type="image/png" href="/vivek_photo.jpeg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <title>Vivek Kumar Portfolio</title>
+    <style>
+      /* All circular images on page */
+      .rounded-avatar {
+        width: 100px;         /* adjust size */
+        height: 100px;        /* adjust size */
+        border-radius: 50%;   /* makes it circle */
+        object-fit: cover;    /* keeps image proportional */
+        border: 2px solid #333; /* optional border */
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f0f0f0;
+        margin: 0;
+        font-family: sans-serif;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Example of a circular profile image on page -->
+    <img src="/vivek_photo.jpeg" alt="Vivek Kumar" class="rounded-avatar" />
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
